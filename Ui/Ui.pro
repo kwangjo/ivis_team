@@ -16,6 +16,7 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     Frame/frame.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    Frame/frameinfo.h
 
 FORMS    += mainwindow.ui

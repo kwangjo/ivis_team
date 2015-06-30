@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "Frame/frameinfo.h"
 
 #include <QFrame>
 #include <QDebug>
@@ -18,6 +19,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionNew_triggered()
 {
+    QString a;
+    a= a.setNum(cntFrame);
+    qDebug()<< a << "test";       //문자열 출
+
+    cntFrame++;
     qDebug("Hewllp0");
     QFrame *line = new QFrame();
 
@@ -29,11 +35,11 @@ void MainWindow::on_actionNew_triggered()
     //line->setLineWidth(500);
 
 
-    QVBoxLayout *layout = new QVBoxLayout();
-    layout->addWidget(line);
+    //QVBoxLayout *layout = new QVBoxLayout();
+    //layout->addWidget(line);
     line->show();
 
-    this->setLayout(layout);
+    //this->setLayout(layout);
 
 
 }
